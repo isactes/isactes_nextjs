@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import 'tailwindcss/tailwind.css'
-import Navigation from './components/Navigation'
+import Navigation from './components/Navigation/Navigation'
 
 export const metadata = {
   title: 'Next.js',
