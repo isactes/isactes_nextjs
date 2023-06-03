@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import 'tailwindcss/tailwind.css'
 import Navigation from './components/Navigation/Navigation'
+import Footer from './components/footer/footer'
 
 export const metadata = {
   title: 'Next.js',
@@ -13,6 +14,7 @@ export default function RootLayout ({ children }) {
       <body>
         <Navigation />
         {children}
+        <Footer />
       </body>
     </>
   )
