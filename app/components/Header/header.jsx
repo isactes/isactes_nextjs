@@ -12,6 +12,14 @@ const links = [{
 {
   label: 'Posts',
   route: '/posts'
+},
+{
+  label: 'Software',
+  route: '/software'
+},
+{
+  label: 'Contact',
+  route: '/contact'
 }
 ]
 function Header () {
