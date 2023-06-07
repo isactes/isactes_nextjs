@@ -1,6 +1,12 @@
-function PostPage () {
+import styles from './Posts.module.css'
+import ListOfPostPage from './ListsOfPosts/ListOfPosts'
+async function PostPage () {
   return (
-    <h1>Aquie mostramos varios post</h1>
+    <div className={styles.section}>
+      <section>
+        <ListOfPostPage />
+      </section>
+    </div>
   )
 }
 export default PostPage
