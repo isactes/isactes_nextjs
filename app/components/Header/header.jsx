@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from './Header.module.css'
+import './Header.css'
 
 const links = [{
   label: 'Home',
@@ -24,17 +24,27 @@ const links = [{
 ]
 function Header () {
   return (
-    <header className={styles.header}>
-      <nav>
-        <ul className={styles.navigation}>
-          {links.map(({ label, route }) => (
-            <li className={styles.links} key={route}>
-              <Link href={route}>
-                {label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+    <header id='header' className='header'>
+      <nav className='menu'>
+        <div className='logobox'>
+          <h2>
+            <Link href='/'>
+              My web
+            </Link>
+          </h2>
+          <span className='btnmenu'><i className='fas fa-bars' /></span>
+        </div>
+        <div className='listcontainer'>
+          <ul className='lists'>
+            {links.map(({ label, route }) => (
+              <li className='links' key={route}>
+                <Link href={route}>
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </header>
   )

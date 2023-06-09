@@ -17,7 +17,7 @@ const links = [{
 
 function Footer () {
   return (
-    <header className={styles.header}>
+    <footer className={styles.header}>
       <nav>
         <ul className={styles.navigation}>
           {links.map(({ label, route }) => (
@@ -29,7 +29,7 @@ function Footer () {
           ))}
         </ul>
       </nav>
-    </header>
+    </footer>
   )
 }
 
