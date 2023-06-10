@@ -1,4 +1,5 @@
 import styles from '../Posts.module.css'
+import LikeButton from '@/app/components/LikeButton/LikeButton'
 const fetcgPost = () => {
   return fetch('https://jsonplaceholder.typicode.com/posts')
     .then(res => res.json())
@@ -12,6 +13,7 @@ async function ListOfPostPage () {
         <article className={styles.articulo} key={post.id}>
           <h2 className={styles.h2}>{post.title}</h2>
           <p>{post.body}</p>
+          <LikeButton id={post.id} />
         </article>
       )
       )}
