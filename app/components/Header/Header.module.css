@@ -44,74 +44,87 @@
     font-size: 1rem;
 }
 
-.menu .listcontainer ul li .links.active {
+.listcontainer ul li .links.active {
     background: var(--blue);
-}
-
-.menu .listcontainer ul li .links:hover {
+  }
+  
+  .listcontainer ul li .links:hover {
     background: var(--blue);
-}
-
-.btn-menu>.fa-bars {
+  }
+  
+  .btnmenu .fas {
     display: none;
-}
+  }
 
 /**media*/
 
-@media only screen and (max-width:900px) {
-    .btnmenu>.fa-bars {
-        display: block;
-        position: absolute;
-        right: 30px;
-        top: 20px;
-        font-size: 28px;
-        color: var(--black);
-        transition: 0.5s;
-        cursor: pointer;
+@media only screen and (max-width: 900px) {
+    .btnmenu .fas {
+      display: block;
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      font-size: 28px;
+      color: var(--black);
+      transition: 0.5s;
+      cursor: pointer;
     }
-    .btnmenu>.fa-times {
-        color: var(--blue);
+  
+    .btnmenu .fas.faTimes {
+      color: var(--blue);
     }
-    .btnmenu>.fa-bars:hover {
-        color: var(--blue);
+  
+    .btnmenu .fas:hover {
+      color: var(--blue);
     }
-    .menu .logobox {
-        margin-left: 30px;
+  
+    .logobox {
+      margin-left: 30px;
     }
-    .menu .listcontainer {
-        position: fixed;
-        top: 60px;
-        left: -100%;
-        background: #fff;
-        width: 100%;
-        height: calc(100vh - 60px);
+  
+    .listcontainer {
+      position: fixed;
+      top: 60px;
+      left: -100%;
+      background: var(--white);
+      width: 100%;
+      height: calc(100vh - 60px);
     }
-    .menu .listcontainer .lists {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        border-top: 4px solid var(--blue);
+  
+    .listcontainer .lists {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-top: 4px solid var(--blue);
     }
-    .menu .listcontainer ul li {
-        width: 90%;
-        border-bottom: 2px solid var(--blue);
-        display: flex;
-        justify-content: center;
+  
+    .listcontainer ul li {
+      width: 90%;
+      border-bottom: 2px solid var(--blue);
+      display: flex;
+      justify-content: center;
     }
-    .menu .listcontainer ul li  {
-        font-size: 20px;
-        text-align: center;
-        padding: 12px 0px;
+  
+    .listcontainer ul li {
+      font-size: 20px;
+      text-align: center;
+      padding: 12px 0px;
     }
-    .menu .list-container ul li  {
-        background: none;
-        color: var(--blue);
+  
+    .listcontainer ul li {
+      background: none;
+      color: var(--blue);
     }
-    .menu .list-container ul li a:hover {
-        background: none;
-        color: var(--red);
+  
+    .listcontainer ul li a:hover {
+      background: none;
+      color: var(--red);
     }
-}
+  
+    .listcontainer.showMenu {
+      left: 0;
+    }
+  }
