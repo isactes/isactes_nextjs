@@ -44,7 +44,7 @@
     font-size: 1rem;
 }
 
-.listcontainer ul li .links.active {
+.menu .listcontainer ul li .active {
     background: var(--blue);
   }
   
