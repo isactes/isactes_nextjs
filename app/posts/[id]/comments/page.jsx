@@ -2,6 +2,8 @@
 const fetchComments = async (id) => {
   await new Promise(resolve => setTimeout(resolve, 5000))
 
+  // throw new Error('Error al cargar los comentarios') se pone para que aparesca los errores, se debe de comentar el return  para que salga el error
+
   return fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`, { cache: 'no-store' })
     .then(res => res.json())
 }
