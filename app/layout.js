@@ -2,6 +2,12 @@ import '../styles/globals.css'
 import 'tailwindcss/tailwind.css'
 import Header from './components/Header/header'
 import Footer from './components/footer/footer'
+import { Frank_Ruhl_Libre } from '@next/font/google'
+
+const font = Frank_Ruhl_Libre({
+  weight: '300',
+  preload: false
+})
 
 export const metadata = {
   title: 'Next.js',
@@ -11,7 +17,7 @@ export const metadata = {
 function RootLayout ({ children }) {
   return (
     <>
-      <body>
+      <body className={font.className}>
         <Header />
         {children}
         <Footer />
