@@ -1,4 +1,4 @@
-
+import Image from 'next/image'
 const fetchComments = async (id) => {
   await new Promise(resolve => setTimeout(resolve, 5000))
 
@@ -16,6 +16,7 @@ async function Post ({ params }) {
       {comments.map(comment => (
         <li key={comment.id}>
           <h2>{comment.name}</h2>
+          <Image width={500} height={500} alt={comment} src={`https://avatars.dicebear.com/api/pixel-art-neutral/${comment.email}.svg`} />
           <p>{comment.body}</p>
         </li>
       ))}
